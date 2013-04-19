@@ -1,0 +1,14 @@
+---
+applications:
+- name: fake_rails
+  framework: rails3
+  runtime: ruby19
+  memory: 256M
+  instances: 1
+  url: fake_rails.${target-base}
+  path: .
+  services:
+    mysql-ce080:
+      vendor: mysql
+      version: '5.1'
+      tier: free
